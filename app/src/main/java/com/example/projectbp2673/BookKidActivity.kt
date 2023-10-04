@@ -4,27 +4,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.example.projectbp2673.databinding.ActivityBookKidBinding
 
 class BookKidActivity : AppCompatActivity() {
-    lateinit var binding:ActivityBookKidBinding
+    lateinit var binding: ActivityBookKidBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_book_kid)
-
-        val btnFairy: Button = findViewById(R.id.buttonFairy)
-        val btnFable: Button = findViewById(R.id.buttonFable)
-        val btnScience: Button = findViewById(R.id.buttonScience)
+//        setContentView(R.layout.activity_book_kid)
+//
+//        val btnFairy: Button = findViewById(R.id.buttonFairy)
+//        val btnFable: Button = findViewById(R.id.buttonFable)
+//        val btnScience: Button = findViewById(R.id.buttonScience)
 
         binding = ActivityBookKidBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnFairy.setOnClickListener{
+        binding.buttonFairy.setOnClickListener{
             replaceFragment(FairyFragment())
         }
-        binding.btnFable.setOnClickListener{
+        binding.buttonFable.setOnClickListener{
             replaceFragment(FableFragment())
         }
-        binding.btnScience.setOnClickListener{
+        binding.buttonScience.setOnClickListener{
             replaceFragment(ScienceFragment())
         }
     }
